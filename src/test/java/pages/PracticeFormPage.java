@@ -61,4 +61,20 @@ public class PracticeFormPage {
                 text(student.state + ' ' + student.city));
 
     }
+
+    @Step("Check form submit")
+    public void checkData2() {
+        $(".modal-content").shouldHave(text(student.firstName),
+                text(student.lastName),
+                text(student.email),
+                text(student.gender),
+                text(student.mobile),
+                text("02 January," + student.yearOfBirth),
+                text(student.subject),
+                text(student.hobby),
+                text(student.testFile),
+                text(student.address),
+                text(student.state + ' ' + student.city));
+
+    }
 }

@@ -10,10 +10,17 @@ public class PracticeFormTest extends TestBase {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
     @Test
-    void formTest() {
+    void positiveFormTest() {
         practiceFormPage.openPage();
         practiceFormPage.fillData();
         practiceFormPage.checkData();
+    }
+
+    @Test
+    void negativeFormTest() {
+        practiceFormPage.openPage();
+        practiceFormPage.fillData();
+        practiceFormPage.checkData2();
     }
 
 }
